@@ -12,10 +12,39 @@
   </button><!--If there is spaces in thet text of the button the innerHTML property dosen't work so we use innerText which ignores spaces-->
 
   <p>Amazon Shipping Calculator</p>
-  <input type="text" placeholder="Cost of order">
-  <button>Calculate</button>
-
+  <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handelCostKeydown(event);
+  ">
+  <button onclick="
+    CalculateTotal();
+  ">Calculate</button>
+  <p class="js-total-cost"></p>
+   
     <script>
+   /*String(25)  // to convert num into string 
+   console.log('25'-5); //automTICAly converts into num but not adding 
+
+   window.document
+   window.console.log('window');
+   window.alert*/
+
+    function handelCostKeydown(event){ //event is an object
+      if (event.key === 'Enter') {
+      CalculateTotal();
+    }
+  }
+
+    function CalculateTotal(){
+     const inputElement = document.querySelector('.js-cost-input');
+      let  cost = Number(inputElement.value);//number converts string into num
+      //type of cost is string
+     if( cost < 40 ){
+        cost = cost + 10;
+     }
+
+     document.querySelector('.js-total-cost').innerHTML =`$${cost}`;
+    }
+
     function subscribe(){
       const buttonElement = document.querySelector('.js-subscribe-button');
 
