@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Document Object Model a built-in object represents/models the web-page  , combines JS and HTML together gives JS full control of the webpage -->
+    <title>DOM</title>
+  </head>
+  <body> 
+    <button>hello</button>   
+    <button class="js-button">Second button</button>
+
+    <script>
+      // method = func saved inside an obj
+      console.log(document.querySelector('button').innerHTML); //selects the button html ele if there is no innerhtml  
+      // and if we add innerhtml we just get text hello
+
+
+     document.querySelector('button').innerHTML = 'Changed';
+      const  buttonElement =  document.querySelector('.js-button');
+      console.log(buttonElement);
+      /*
+      console.log(document.title);
+      document.title = 'Changed';
+
+      console.log(document.body); 
+      console.log(typeof document.body); // O/P: object
+      
+      console.log(document.body.innerHTML);//controls all the html  gives everything written inside script in the body that's why called innerHTML
+      document.body.innerHTML = '<button>Good job!</button>';*/
+      /*
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!';
+      */
+     </script>
+  </body>
+</html>
