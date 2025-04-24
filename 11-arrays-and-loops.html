@@ -50,7 +50,7 @@
     }*/
 
    //Assume we have an array of nums [1,1,3] how do we calculate the total? ACCUMULATOR PATTERN 
-
+/*
    const nums = [1,1,3];
    let total = 0;
    for (let i = 0 ; i < nums.length ; i++) {
@@ -69,6 +69,49 @@
        numsDouble.push(num * 2);
      }
      console.log(numsDouble);
+     */
+    const array1 = [1,2,3 ] // this array contains a reference not values
+    const array2 = array1.slice();//this will make a copy and point to two different arrays but without slice it points to the same  array in the memory
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    const [firstValue, secondValue] = [1,2,3];
+
+    for( let i = 1 ; i<=10 ;i++){
+      if ( i % 3 === 0){
+        continue; //skips one iteration
+      }
+      console.log(i);
+      if (i===8) {
+        break; // breaks the loop
+      }
+    }
+    let i = 1;
+    while (i <= 10){//in while loop do the increment statement manually
+      if (i % 3 === 0){
+        i++;
+        continue;
+      }
+      console.log(i);
+      i++;
+    }
+
+    function doubleArray(nums) {
+    const numsDouble = [];
+
+
+     for ( let i= 0 ; i< nums.length ; i++ ) {
+       const num = nums[i];
+       if (num === 0){
+        return numsDouble;
+       }
+       numsDouble.push(num * 2);
+     }
+    return numsDouble;
+    }
+    console.log(doubleArray([1,1,3]));
+    console.log(doubleArray([2,2,5,0,5]));
     </script>
   </body>
 </html>
