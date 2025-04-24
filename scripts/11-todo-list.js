@@ -16,13 +16,13 @@ function renderTodolist(){
     //const dueDate = todoObject.dueDate; can be wriiten in one line as
     const { name , dueDate} = todoObject;
     const html = `
-    <p>
-      ${name} ${dueDate}
-        <button onclick = "
-           todolist.splice(${i}, 1);
-           renderTodolist();
-        ">Delete</button>
-    </p>`;
+    <div>${name}</div>
+    <div>${dueDate}</div>
+     <button onclick = "
+        todolist.splice(${i}, 1);
+        renderTodolist();
+    " class="delete-todo-button">Delete</button>
+    `;
     todolistHTML += html;
   }
   
