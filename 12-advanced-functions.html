@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body> 
+    <script>  
+    /*  function greeting () {
+        console.log('hello');
+      }
+      greeting();
+      //1)Functions are values , we can save functions in variables , objects
+
+      const num = 2;
+      //Anonymous function
+      const function1 = function (){
+        console.log('hello2');
+      };
+      console.log(function1);
+      console.log(typeof function1);//func
+      function1 ();
+
+      const object1 = {
+        num : 2,
+        //method: function saved inside an object
+        fun: function () { 
+          console.log('hello3');
+        }
+      };
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(2); //passing a value into a function
+
+      function run (param) {
+          param();
+      } 
+      run(function () { //passing a func into another func
+        console.log('hello4');
+      });*/
+
+      //setTimeout() : allows us to run us a function in the future , takes two parameters 
+      // (1)a func we want to run in the future  
+      //(2) how long to wait before running this function
+      setTimeout(function() {
+        console.log('timeout');
+        console.log('timeout');
+      },3000);
+
+      console.log('next line');
+//Asynchronous Code : computer won't wait for a line to finish before going to the next line ex: setTimeout
+//Synchronous code :  computer will wait for a line to finish before going to the next line
+
+//setInterval: takes two parameters: keeps running a function every seconds it's set 
+//1)A func we want to run in the future
+//2)seconds
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+      console.log('next line 2')
+    </script>
+  </body>
+</html>
