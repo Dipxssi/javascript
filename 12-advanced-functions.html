@@ -4,7 +4,26 @@
     <title>Advanced Functions</title>
   </head>
   <body> 
+    <button onclick="" class="js-button">Click</button>
     <script>  
+    //addEventListener() : lets us run some code when we interact with the element, sort of does the same thing as onclick, takes two parameters
+    //1)event: what type of interactions we want to listen for
+    //2)A function we want to run
+    //let's us add multiple event listeners for one event
+  /*
+     const buttonElement = document.querySelector('.js-button');
+
+     const eventListener = ()=>{
+       console.log('click');
+    };
+
+     buttonElement.addEventListener('click', eventListener);
+    buttonElement.removeEventListener('click',eventListener);
+
+    buttonElement.addEventListener('click', ()=>{
+       console.log('click2');
+    });
+
     /*  function greeting () {
         console.log('hello');
       }
@@ -62,11 +81,77 @@
       console.log('next line 2')*/
 
       //Another way to loop through an array
+      /*
       [
         'make dinner',
         'wash dishes',
         'watch youtube'
-      ]
+      ].forEach((value , index) => { //saves value from array
+         if (value === 'wash dishes') {
+          return;
+         }
+         console.log(index);
+         console.log(value);
+      });//forEach is a method in array to loop
+
+     const regularFUnction = function(param , param2) {
+      console.log('hello');
+      return 5;
+     }
+regularFUnction();
+
+      //Arrow functions
+      const arrowFunction = (param,param2) => {
+        console.log('hello');
+        return 5;
+      };
+      arrowFunction();
+
+      const oneParam = (param) => {
+         console.log(param + 1);
+      };
+      oneParam(2);
+
+      const oneLine = () =>   2 + 3; //one line param statement
+      console.log(oneLine);
+
+      const object2 = {
+        method : () =>{
+
+        },
+        method () {
+
+        }
+      };
+      */
+
+
+  // .filter() : to remove -ve num from an array
+  //1.creates a new array
+  //2.return true , put value in array and if return false it will not put value in array
+  console.log([1 , -3 , 5].filter((value,index)=>{
+    /*
+    if (value >= 0){ 
+    return true;
+    }else{
+      return false;
+    }*/
+    return value >= 0;
+  }));  
+
+
+//to double an array using .map()
+//creates new array
+//whatever we return will be added to new array
+  console.log(  [1,1,3].map((value , index) => {
+         return value * 2;
+    }));
+
+    console.log(  [1,1,3].map(value => value * 2));
+
+
+//closure property of functions
+//if a func has access to a value , it will always have access to that value , value gets packaged together (enclosed ) with the function
     </script>
   </body>
 </html>
